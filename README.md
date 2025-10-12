@@ -38,8 +38,8 @@ Before installation, ensure you have:
 
 ```bash
 # Clone the repository
-git clone https://github.com/jezweb/smart-prompts-mcp.git
-cd smart-prompts-mcp
+git clone https://github.com/hmcts/ai-in-sdlc-smart-prompts-mcp.git
+cd ai-in-sdlc-smart-prompts-mcp
 
 # Install dependencies
 npm install
@@ -83,7 +83,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
   "mcpServers": {
     "smart-prompts": {
       "command": "node",
-      "args": ["/absolute/path/to/smart-prompts-mcp/dist/index.js"],
+      "args": ["/absolute/path/to/ai-in-sdlc-smart-prompts-mcp/dist/index.js"],
       "env": {
         "GITHUB_OWNER": "your-username",
         "GITHUB_REPO": "your-prompts-repo",
@@ -100,7 +100,7 @@ Add to Roo Cline MCP settings:
 ```json
 "smart-prompts": {
   "command": "node",
-  "args": ["/absolute/path/to/smart-prompts-mcp/dist/index.js"],
+  "args": ["/absolute/path/toai-in-sdlc-smart-prompts-mcp/dist/index.js"],
   "env": {
     "GITHUB_OWNER": "your-username",
     "GITHUB_REPO": "your-prompts-repo",
