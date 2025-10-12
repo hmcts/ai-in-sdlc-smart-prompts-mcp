@@ -1,0 +1,41 @@
+{
+  "name": "smart-prompts-mcp",
+  "version": "3.0.0",
+  "description": "Enhanced MCP server for managing prompts from GitHub with intelligent discovery and composition",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "tsx --watch src/index.ts",
+    "test": "npm run build && vitest run test/test-suite.js",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:perf": "npm run build && node test/performance-benchmark.js",
+    "test:verify": "npm run build && node verify-install.js"
+  },
+  "keywords": ["mcp", "prompts", "ai", "llm", "github", "smart", "discovery"],
+  "author": "jezweb",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "gray-matter": "^4.0.3",
+    "chokidar": "^3.5.3",
+    "@octokit/rest": "^20.0.0",
+    "node-fetch": "^3.3.2",
+    "handlebars": "^4.7.8",
+    "minimatch": "^9.0.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@vitest/coverage-v8": "^1.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
