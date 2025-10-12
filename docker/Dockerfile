@@ -17,13 +17,13 @@ ENV PATH="/root/.local/bin/:$PATH"
 # First install the MCP Proxy to allow SSE transport
 #
 
-RUN uv tool install git+https://github.com/jonmach/mcp-proxy --reinstall
+RUN uv tool install git+https://github.com/hmcts/ai-in-sdlc-mcp-proxy --reinstall
 
 #
 # Now the Smart-Prompts Service
 #
 
-RUN git clone https://github.com/jonmach/smart-prompts-mcp
+RUN git clone https://github.com/hmcts/ai-in-sdlc-smart-prompts-mcp
 WORKDIR /home/app/smart-prompts-mcp
 
 RUN npm cache clean --force

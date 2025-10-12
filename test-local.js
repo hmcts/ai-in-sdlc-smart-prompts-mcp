@@ -7,8 +7,8 @@ console.log('Testing Smart Prompts MCP Server startup...\n');
 const server = spawn('node', ['dist/index.js'], {
   env: {
     ...process.env,
-    GITHUB_OWNER: 'jonmach',
-    GITHUB_REPO: 'smart-prompts'
+    GITHUB_OWNER: 'hmcts',
+    GITHUB_REPO: 'ai-in-sdlc-smart-prompts'
   }
 });
 

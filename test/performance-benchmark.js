@@ -38,8 +38,8 @@ async function runBenchmark() {
     command: 'node',
     args: [path.join(__dirname, '..', 'dist', 'index.js')],
     env: {
-      GITHUB_OWNER: process.env.GITHUB_OWNER || 'jonmach',
-      GITHUB_REPO: process.env.GITHUB_REPO || 'smart-prompts',
+      GITHUB_OWNER: process.env.GITHUB_OWNER || 'hmcts',
+      GITHUB_REPO: process.env.GITHUB_REPO || 'ai-in-sdlc-smart-prompts',
       GITHUB_TOKEN: process.env.GITHUB_TOKEN || ''
     }
   });

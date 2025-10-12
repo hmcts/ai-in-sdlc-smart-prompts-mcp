@@ -10,8 +10,8 @@ async function testMCPServer() {
   const serverProcess = spawn('node', ['dist/index.js'], {
     env: {
       ...process.env,
-      GITHUB_OWNER: 'jonmach',
-      GITHUB_REPO: 'smart-prompts'
+      GITHUB_OWNER: 'hmcts',
+      GITHUB_REPO: 'ai-in-sdlc-smart-prompts'
     }
   });
 
@@ -20,8 +20,8 @@ async function testMCPServer() {
     command: 'node',
     args: ['dist/index.js'],
     env: {
-      GITHUB_OWNER: 'jonmach',
-      GITHUB_REPO: 'smart-prompts'
+      GITHUB_OWNER: 'hmcts',
+      GITHUB_REPO: 'ai-in-sdlc-smart-prompts'
     }
   });
 
