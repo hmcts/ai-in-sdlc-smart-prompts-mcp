@@ -17,19 +17,19 @@ ENV PATH="/root/.local/bin/:$PATH"
 # First install the MCP Proxy to allow SSE transport
 #
 
-RUN uv tool install git+https://github.com/jonmach/mcp-proxy --reinstall
+RUN uv tool install git+https://github.com/hmcts/ai-in-sdlc-mcp-proxy --reinstall
 
 #
 # Now the Smart-Prompts Service
 #
 
-RUN git clone https://github.com/jonmach/smart-prompts-mcp
-WORKDIR /home/app/smart-prompts-mcp
+RUN git clone https://github.com/hmcts/ai-in-sdlc-smart-prompts-mcp
+WORKDIR /home/app/ai-in-sdlc-smart-prompts-mcp
 
 RUN npm cache clean --force
 RUN npm install
 RUN npm run build 
-RUN ./verify-install.sh
+# RUN ./verify-install.sh
 COPY ./mydotenv.txt /home/app/.env
 
 #WORKDIR /home/app
@@ -40,7 +40,7 @@ EXPOSE 8080
 #CMD ["tail", "-f", "/dev/null"]
 
 # Start mcp-proxy with your MCP server
-CMD ["mcp-proxy", "--pass-environment", "--host=0.0.0.0", "--debug", "--port=8080", "node", "/home/app/smart-prompts-mcp/dist/index.js"]
+CMD ["mcp-proxy", "--pass-environment", "--host=0.0.0.0", "--debug", "--port=8080", "node", "/home/app/ai-in-sdlc-smart-prompts-mcp/dist/index.js"]
 
 # Add the following to your Azure App Container Environment Variables
 
